@@ -1,7 +1,7 @@
 #!/bin/bash
 # ------------------------------------------------------
 # Deploy a lightweight Ubuntu VM to act as a Tailscale router in Azure (West US)
-# Author: Shannon Kuehn
+# Author: Shannon Eldridge-Kuehn
 # ------------------------------------------------------
 
 # Variables
