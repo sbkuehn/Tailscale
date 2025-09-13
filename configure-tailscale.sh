@@ -7,9 +7,17 @@
 # Install Tailscale
 curl -fsSL https://tailscale.com/install.sh | sh
 
-# Bring up Tailscale with subnet routing enabled
+# Variables (edit these)
+TS_AUTHKEY=${TS_AUTHKEY:-"tskey-auth-REPLACE-ME"}
+TS_SUBNET=${TS_SUBNET:-"REPLACEME"}
+TS_HOSTNAME=${TS_HOSTNAME:-"REPLACEME"}
+
+# Install Tailscale
+curl -fsSL https://tailscale.com/install.sh | sh
+
+# Bring up Tailscale
 sudo tailscale up \
-  --authkey tskey-auth-YOUR-KEY-HERE \
-  --advertise-routes=10.10.0.0/16 \
+  --authkey $TS_AUTHKEY \
+  --advertise-routes=$TS_SUBNET \
   --accept-routes \
-  --hostname sbk-wus-router01
+  --hostname $TS_HOSTNAME
