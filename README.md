@@ -3,20 +3,6 @@
 This repo contains scripts and documentation to replace an **Azure Site-to-Site VPN** with **Tailscale subnet routers**.  
 It demonstrates how to extend an on-premises network into Azure across multiple regions without expensive VPN gateways.
 
----
-
-## Repo Structure
-
-```
-.
-├── deploy-ts-router.sh        # Script to deploy a lightweight Ubuntu VM in Azure as a router
-├── configure-tailscale-wus.sh # Script to install and configure Tailscale on the router VM
-├── create-udr.sh              # Script to create and associate an Azure Route Table (UDR)
-└── README.md                  # This file (comprehensive guide)
-```
-
----
-
 ## Prerequisites
 
 - [Azure CLI](https://learn.microsoft.com/cli/azure/install-azure-cli) installed and logged in:
